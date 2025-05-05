@@ -1,6 +1,6 @@
 # Lab: Binary Trees – Depth and Ancestors
 
-**Lab GitHub Repo**: [Binary Tree Lab](https://github.com/your-org/binary-tree-lab)
+**Lab GitHub Repo**: [Binary Tree Lab](https://github.com/learn-co-curriculum/binary-tree-lab)
 
 ---
 
