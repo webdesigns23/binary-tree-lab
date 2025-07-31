@@ -28,7 +28,19 @@ def max_depth(root: Optional[TreeNode]) -> int:
         depth += 1
     return depth
 
-root = TreeNode(1)
+# TODO: Implement the lowest_common_ancestor function
+def lowest_common_ancestor(root: TreeNode, p: TreeNode, q: TreeNode) -> TreeNode:
+    if not root:
+        return 0
+    if p.val < root.val and q.val < root.val:
+        return lowest_common_ancestor(root.left, p, q)
+    if p.val > root.val and q.val > root.val:
+        return lowest_common_ancestor(root.right, p, q)
+   
+    else:
+        return root
+    
+root = TreeNode(4)
 root.left = TreeNode(2)
 root.right = TreeNode(3)
 root.left.left = TreeNode(4)
@@ -36,9 +48,8 @@ root.left.right = TreeNode(5)
 root.right.left = TreeNode(6)
 root.right.right = TreeNode(7)
 
+p = root.left
+q = root.right
+
 print("Max Depth:", max_depth(root))
-
-# TODO: Implement the lowest_common_ancestor function
-def lowest_common_ancestor(root: TreeNode, p: TreeNode, q: TreeNode) -> TreeNode:
-    pass
-
+print ("LCA: ", (lowest_common_ancestor(root, p, q)).val)
